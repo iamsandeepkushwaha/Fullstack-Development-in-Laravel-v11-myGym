@@ -15,16 +15,6 @@ class CheckUserRole
      */
     public function handle(Request $request, Closure $next, string $role): Response
     {
-        // if (!Auth()->user()->hasRole($role)) {
-        //     // Redirect...
-        //     return abort(403);
-        // }
-
-        // if (!$request->user()->hasRole($role)) {
-        //     // Redirect...
-        //     return abort(403);
-        // }
-
         if(auth()->user()->role !== $role) {
             return redirect()->route('dashboard');
         }
