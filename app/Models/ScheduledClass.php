@@ -11,6 +11,8 @@ class ScheduledClass extends Model
 {
     use HasFactory;
 
+    protected $guarded = [];
+
     /**
      * Get the instructor that owns the ScheduledClasses.
      */
